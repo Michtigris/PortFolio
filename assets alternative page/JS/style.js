@@ -138,7 +138,7 @@ navbar.style.marginTop = "86px";
 navbar.style.marginLeft = "127px";
 uiLayer.appendChild(navbar);
 
-L = [["New Projects", "https://www.youtube.com/shorts/vj-aKQOUBGA"], ["All Projects", "https://www.youtube.com/shorts/qj8xH4PoPsg"], 
+L = [["New Projects", "https://www.youtube.com/shorts/vj-aKQOUBGA"], ["All Projects", "https://www.youtube.com/shorts/qj8xH4PoPsg"],
 ["Nightmare", "https://youtube.com"], ["Retour", "../index.html"]];
 for (let i = 0; i < L.length; i++) navitem(L[i], i);
 
@@ -156,6 +156,15 @@ function navitem(part, n) {
   elem.style.wordSpacing = "-25px";
   elem.style.transform = "scaleY(0.75)";
   elem.style.marginBottom = "20px";
+
+  elem.addEventListener("mouseenter", () => {
+    elem.style.listStyle = "square";
+  });
+
+  elem.addEventListener("mouseleave", () => {
+    elem.style.listStyle = "none";
+  });
+
   navbar.appendChild(elem);
 }
 

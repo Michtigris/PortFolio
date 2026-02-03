@@ -669,6 +669,10 @@ function createCard(p) {
   media.style.height = "160px";
   media.style.overflow = "hidden";
   media.style.background = "#020617";
+  media.style.cursor = "pointer";
+
+  // Clic sur le media ouvre Vercel
+  media.onclick = () => window.open(p.vercelUrl, "_blank");
 
   let img = null;
   let video = null;
